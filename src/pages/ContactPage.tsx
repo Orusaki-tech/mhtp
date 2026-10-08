@@ -12,12 +12,12 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col w-full">
-      <section className="w-full bg-primary-container text-on-primary-container px-gutter py-space-xl">
-        <div className="max-w-7xl mx-auto flex flex-col gap-space-md">
+      <section className="w-full bg-primary-container text-on-primary-container px-4 sm:px-gutter py-space-xl">
+        <div className="max-w-7xl mx-auto flex flex-col gap-space-md text-center md:text-left items-center md:items-start">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed font-bold">
             Contact
           </span>
-          <h1 className="font-headline-xl text-headline-xl text-on-primary font-bold">
+          <h1 className="font-headline-xl text-headline-xl text-on-primary font-bold text-balance">
             Get in Touch
           </h1>
           <p className="font-body-lg text-body-lg text-on-primary-container max-w-2xl">
@@ -27,12 +27,14 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="w-full max-w-7xl mx-auto px-gutter py-space-xl">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-gutter py-space-xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
-          <div className="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-xl p-space-lg sm:p-10 flex flex-col gap-space-md">
-            <h2 className="font-headline-md text-headline-md text-on-surface">Send a Message</h2>
+          <div className="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-xl p-space-md sm:p-10 flex flex-col gap-space-md order-2 lg:order-1">
+            <h2 className="font-headline-md text-headline-md text-on-surface text-center lg:text-left">
+              Send a Message
+            </h2>
             {sent ? (
-              <p className="p-space-md bg-secondary/20 rounded-lg text-body-sm font-body-sm text-on-surface">
+              <p className="p-space-md bg-secondary/20 rounded-lg text-body-sm font-body-sm text-on-surface text-center">
                 Thank you. Your message has been received.
               </p>
             ) : (
@@ -100,23 +102,29 @@ export default function ContactPage() {
             )}
           </div>
 
-          <div className="lg:col-span-5 flex flex-col gap-space-md">
-            <div className="bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-sm">
+          <div className="lg:col-span-5 flex flex-col gap-space-md order-1 lg:order-2">
+            <div className="bg-surface-container-lowest rounded-xl shadow-xl p-space-lg flex flex-col gap-space-sm text-center lg:text-left items-center lg:items-start">
               <h3 className="font-title-lg text-title-lg font-bold text-on-surface">Contact</h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">{SITE.address}</p>
-              <p className="font-body-md text-body-md text-on-surface-variant">{SITE.phone}</p>
-              <p className="font-body-md text-body-md text-on-surface-variant">{SITE.email}</p>
+              <p className="font-body-md text-body-md text-on-surface-variant break-words">
+                {SITE.address}
+              </p>
+              <p className="font-body-md text-body-md text-on-surface-variant break-words">
+                {SITE.phone}
+              </p>
+              <p className="font-body-md text-body-md text-on-surface-variant break-all">
+                {SITE.email}
+              </p>
             </div>
-            <div className="flex flex-wrap gap-space-sm">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-space-sm justify-center lg:justify-start">
               <Link
                 to="/prayer-request"
-                className="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md font-semibold"
+                className="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md font-semibold text-center"
               >
                 Prayer Request
               </Link>
               <Link
                 to="/partner-donate"
-                className="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md font-semibold"
+                className="px-4 py-2 rounded-lg bg-surface-container text-on-surface font-label-md font-semibold text-center"
               >
                 Partner / Donate
               </Link>

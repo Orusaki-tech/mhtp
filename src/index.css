@@ -117,7 +117,14 @@
 
   body {
     overscroll-behavior: none;
+    overflow-x: hidden;
     @apply bg-background font-body-md text-body-md text-on-surface antialiased;
+  }
+
+  img,
+  svg,
+  video {
+    max-width: 100%;
   }
 
   ::selection {
@@ -188,9 +195,15 @@
 }
 
 .hero-accent-line {
-  transform-origin: left center;
+  transform-origin: center;
   animation: hero-line 1s ease-out 0.35s forwards;
   transform: scaleX(0);
+}
+
+@media (min-width: 768px) {
+  .hero-accent-line {
+    transform-origin: left center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

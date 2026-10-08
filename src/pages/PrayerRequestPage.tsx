@@ -14,21 +14,21 @@ export default function PrayerRequestPage() {
 
   return (
     <div className="flex flex-col w-full">
-      <section className="w-full bg-surface-container-lowest px-gutter py-space-xl">
-        <div className="max-w-3xl mx-auto flex flex-col gap-space-md w-full">
+      <section className="w-full bg-surface-container-lowest px-4 sm:px-gutter py-space-xl">
+        <div className="max-w-3xl mx-auto flex flex-col gap-space-md w-full text-center md:text-left items-center md:items-start">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">
             Healing &amp; deliverance
           </span>
-          <h1 className="font-headline-xl text-headline-xl font-bold text-on-surface">
+          <h1 className="font-headline-xl text-headline-xl font-bold text-on-surface text-balance">
             Prayer request
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant">{healing.body}</p>
         </div>
       </section>
 
-      <section className="w-full bg-surface px-gutter py-space-xl">
+      <section className="w-full bg-surface px-4 sm:px-gutter py-space-xl">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
-          <div className="lg:col-span-5 flex flex-col gap-space-md">
+          <div className="lg:col-span-5 flex flex-col gap-space-md text-center lg:text-left items-center lg:items-start">
             <h2 className="font-headline-sm text-headline-sm text-on-surface font-bold">
               Pray with us
             </h2>
@@ -44,14 +44,16 @@ export default function PrayerRequestPage() {
             </Link>
           </div>
 
-          <div className="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
+          <div className="lg:col-span-7 bg-surface-container-lowest p-space-md sm:p-space-lg rounded-xl shadow-md">
             {sent ? (
-              <p className="p-space-md bg-secondary/20 rounded-lg text-body-sm text-on-surface">
+              <p className="p-space-md bg-secondary/20 rounded-lg text-body-sm text-on-surface text-center">
                 Thank you. Your prayer request has been received in confidence.
               </p>
             ) : (
               <form className="flex flex-col gap-space-md" onSubmit={handleSubmit}>
-                <h3 className="font-headline-sm text-headline-sm text-on-surface">Your petition</h3>
+                <h3 className="font-headline-sm text-headline-sm text-on-surface text-center lg:text-left">
+                  Your petition
+                </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
                   <div className="flex flex-col gap-1">
                     <label className="font-label-md font-bold text-on-surface">Your name *</label>
