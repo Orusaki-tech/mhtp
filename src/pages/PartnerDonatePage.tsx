@@ -7,28 +7,27 @@ const DESIGNATIONS = [
   {
     id: "general",
     title: "Tithes, Offerings & Donations",
-    body: "General support received as tithes, offerings, donations, grants, or legacies under Object 7.",
+    body: CHARTER.objects[6].body,
   },
   {
     id: "vocational",
-    title: "Vocational Programs",
-    body: "Support for vocational training centres and institutes dedicated to skills development (Object 4).",
+    title: "Vocational Training",
+    body: CHARTER.objects[3].body,
   },
   {
     id: "healing",
-    title: "Healing & Deliverance Ministry",
-    body: "Support for multi-faceted healing and deliverance ministry as set out in Object 2.",
+    title: "Healing & Deliverance",
+    body: CHARTER.objects[1].body,
   },
   {
-    id: "property",
-    title: "Lands & Facilities",
-    body: CHARTER.propertyObjects.acquisition,
+    id: "outreach",
+    title: "Evangelism & Outreach",
+    body: CHARTER.objects[4].body,
   },
 ] as const
 
 export default function PartnerDonatePage() {
   const [sent, setSent] = useState(false)
-  const resourceObject = CHARTER.objects.find((o) => o.id === 7)!
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
@@ -40,16 +39,13 @@ export default function PartnerDonatePage() {
       <section className="w-full bg-primary-container text-on-primary-container px-gutter py-space-xl">
         <div className="max-w-3xl mx-auto flex flex-col gap-space-md w-full">
           <span className="uppercase tracking-widest text-secondary-fixed font-label-sm text-label-sm font-bold">
-            Object 7 • Resource Mobilisation
+            Partnership
           </span>
           <h1 className="font-headline-xl text-headline-xl text-on-primary font-bold">
             Partner &amp; Donate
           </h1>
           <p className="font-body-lg text-body-lg text-on-primary-container">
-            {resourceObject.body}
-          </p>
-          <p className="font-body-sm text-body-sm text-on-primary-container/90">
-            {SITE.address} · {SITE.phone} · {SITE.email}
+            {CHARTER.objects[6].body}
           </p>
         </div>
       </section>
@@ -58,10 +54,10 @@ export default function PartnerDonatePage() {
         <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
           <div>
             <h2 className="font-headline-md text-headline-md text-on-surface font-bold">
-              Giving Designations
+              Where Your Support Goes
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
-              Designations below mirror only the Memorandum objects and Articles property powers.
+              Give toward the ministry offerings below.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
@@ -82,21 +78,19 @@ export default function PartnerDonatePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
           <div className="lg:col-span-5 flex flex-col gap-space-md">
             <h2 className="font-headline-md text-headline-md text-on-surface font-bold">
-              Stewardship
+              Why Give
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              {CHARTER.companyName} is {CHARTER.entityType.toLowerCase()}. The liability of members
-              is limited; each member&apos;s guarantee does not exceed {CHARTER.memberGuarantee}.
+              Your gifts sustain ministry operations, vocational programs, and charitable projects.
             </p>
             <p className="font-body-sm text-body-sm text-on-surface-variant">
-              Founding subscribers:{" "}
-              {CHARTER.subscribers.map((s) => `${s.name} (${s.occupation})`).join("; ")}.
+              Prefer to talk first? {SITE.phone} · {SITE.email}
             </p>
             <Link
               to="/about-legal-status"
               className="font-label-md text-label-md font-semibold text-secondary"
             >
-              View Memorandum &amp; Articles summary →
+              Learn more about us →
             </Link>
           </div>
           <div className="lg:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-md">
@@ -133,7 +127,7 @@ export default function PartnerDonatePage() {
                 </div>
                 <div className="flex flex-col gap-1">
                   <label className="font-label-md text-label-md font-semibold text-on-surface">
-                    Designation Interest
+                    Area of Support
                   </label>
                   <select className="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none">
                     {DESIGNATIONS.map((d) => (

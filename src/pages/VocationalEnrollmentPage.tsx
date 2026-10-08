@@ -16,18 +16,13 @@ export default function VocationalEnrollmentPage() {
       <section className="w-full bg-surface-container-lowest px-gutter py-space-xl">
         <div className="max-w-3xl mx-auto flex flex-col gap-space-md w-full">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">
-            Object 4 • Vocational Training
+            Vocational Training
           </span>
           <h1 className="font-headline-xl text-headline-xl font-bold text-on-surface tracking-tight">
-            Express Interest in Vocational Training
+            Express Interest
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
             {CHARTER.objects[3].body}
-          </p>
-          <p className="font-body-md text-body-md text-on-surface-variant">
-            Specific course lists, trade tracks, fees, and schedules are not published here until
-            they are formally established under the company&apos;s objects. Use this form to register
-            your interest.
           </p>
         </div>
       </section>
@@ -41,14 +36,9 @@ export default function VocationalEnrollmentPage() {
             <p className="font-body-md text-body-md text-on-surface-variant">
               {CHARTER.objects[2].body}
             </p>
-            <div className="p-space-md bg-surface-container rounded-xl flex flex-col gap-1">
-              <span className="font-label-sm text-label-sm uppercase text-secondary font-bold">
-                Contact
-              </span>
-              <p className="font-body-sm text-body-sm text-on-surface">{SITE.address}</p>
-              <p className="font-body-sm text-body-sm text-on-surface">{SITE.phone}</p>
-              <p className="font-body-sm text-body-sm text-on-surface">{SITE.email}</p>
-            </div>
+            <p className="font-body-sm text-body-sm text-on-surface-variant">
+              Questions? {SITE.phone} · {SITE.email}
+            </p>
             <Link
               to="/vocational-programs"
               className="font-label-md text-label-md font-semibold text-secondary"
@@ -104,7 +94,7 @@ export default function VocationalEnrollmentPage() {
                   <textarea
                     rows={4}
                     className="px-3.5 py-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none"
-                    placeholder="Share briefly why you are interested in vocational training or capacity building."
+                    placeholder="Share briefly why you are interested."
                   />
                 </div>
                 <button

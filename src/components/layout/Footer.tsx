@@ -17,14 +17,13 @@ export function Footer() {
                   {SITE.name}
                 </span>
                 <span className="font-label-sm text-label-sm text-on-surface-variant">
-                  Limited by Guarantee
+                  Faith · Healing · Empowerment
                 </span>
               </div>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              A company limited by guarantee in Uganda, established for the advancement of Christian
-              faith, holistic healing and deliverance, vocational training, and community outreach
-              — as set out in its Memorandum of Association.
+              Advancing Christian faith, holistic healing and deliverance, vocational training, and
+              community outreach.
             </p>
             <div className="flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
               <div className="flex items-center gap-2">
@@ -44,12 +43,12 @@ export function Footer() {
 
           <div className="lg:col-span-2 flex flex-col gap-space-sm">
             <span className="font-label-md text-label-md font-bold uppercase tracking-wider text-on-surface">
-              Ministry
+              Explore
             </span>
             <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/pillars-of-ministry">
-                  Objects &amp; Pillars
+                  Offerings
                 </Link>
               </li>
               <li>
@@ -67,27 +66,17 @@ export function Footer() {
                   Prayer Request
                 </Link>
               </li>
-              <li>
-                <Link className="hover:text-on-surface transition-colors" to="/courses">
-                  Online Courses
-                </Link>
-              </li>
             </ul>
           </div>
 
           <div className="lg:col-span-2 flex flex-col gap-space-sm">
             <span className="font-label-md text-label-md font-bold uppercase tracking-wider text-on-surface">
-              Governance
+              Connect
             </span>
             <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/about-legal-status">
-                  Memorandum &amp; Articles
-                </Link>
-              </li>
-              <li>
-                <Link className="hover:text-on-surface transition-colors" to="/about-legal-status">
-                  Founding Subscribers
+                  About
                 </Link>
               </li>
               <li>
@@ -109,52 +98,29 @@ export function Footer() {
                 Stay in Touch
               </span>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Leave your email for ministry updates related to our charter objects.
+                Leave your email for ministry updates.
               </p>
-              <form
-                className="flex flex-col gap-space-xs"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <div className="flex gap-2">
-                  <input
-                    className="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary"
-                    placeholder="Email address"
-                    type="email"
-                  />
-                  <button
-                    className="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors"
-                    type="submit"
-                  >
-                    Join
-                  </button>
-                </div>
+              <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+                <input
+                  className="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary"
+                  placeholder="Email address"
+                  type="email"
+                />
+                <button
+                  className="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors"
+                  type="submit"
+                >
+                  Join
+                </button>
               </form>
             </div>
           </div>
         </div>
 
-        <div className="pt-space-md bg-surface-container-high/40 rounded-xl p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md text-body-sm font-body-sm text-on-surface-variant">
-          <div className="flex items-center gap-space-sm">
-            <Icon name="shield" className="text-[20px] text-secondary shrink-0" />
-            <p>
-              <strong className="text-on-surface">Legal Entity:</strong> {SITE.legalName} is a
-              company limited by guarantee and not having a share capital, with objects set out in
-              its Memorandum of Association.
-            </p>
-          </div>
-          <Link
-            className="hover:text-on-surface transition-colors whitespace-nowrap text-label-sm font-label-sm"
-            to="/about-legal-status"
-          >
-            Memorandum &amp; Articles
-          </Link>
-        </div>
-
-        <div className="mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+        <div className="mt-space-lg pt-space-md border-t border-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
           <p>
-            © {new Date().getFullYear()} {SITE.legalName}. All Rights Reserved.
+            © {new Date().getFullYear()} {SITE.name}. All Rights Reserved.
           </p>
-          <p className="text-on-surface-variant/80">{SITE.address}</p>
         </div>
       </div>
     </footer>

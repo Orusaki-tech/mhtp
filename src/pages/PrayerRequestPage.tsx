@@ -17,7 +17,7 @@ export default function PrayerRequestPage() {
       <section className="w-full bg-surface-container-lowest px-gutter py-space-xl">
         <div className="max-w-3xl mx-auto flex flex-col gap-space-md w-full">
           <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">
-            Object 2 • Holistic Healing &amp; Deliverance
+            Healing &amp; Deliverance
           </span>
           <h1 className="font-headline-xl text-headline-xl font-bold text-on-surface">
             Prayer Request
@@ -33,20 +33,15 @@ export default function PrayerRequestPage() {
               How We Pray
             </h2>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              Petitions may relate to spiritual liberation, physical health, financial
-              breakthrough, and emotional healing for mental health related issues — the scope of
-              Object 2. We do not provide clinical or medical services.
+              Share petitions related to spiritual liberation, physical health, financial
+              breakthrough, and emotional healing. We minister through prayer and pastoral care —
+              not clinical or medical services.
             </p>
-            <div className="p-space-md bg-surface-container rounded-xl flex flex-col gap-1">
-              <span className="font-label-sm text-label-sm uppercase text-secondary font-bold">
-                Contact
-              </span>
-              <p className="font-body-sm text-body-sm text-on-surface">{SITE.phone}</p>
-              <p className="font-body-sm text-body-sm text-on-surface">{SITE.email}</p>
-              <p className="font-body-sm text-body-sm text-on-surface">{SITE.address}</p>
-            </div>
+            <p className="font-body-sm text-body-sm text-on-surface-variant">
+              Prefer to call? {SITE.phone}
+            </p>
             <Link to="/outreach-healing" className="font-label-md text-label-md font-semibold text-secondary">
-              Outreach &amp; ministry invitations →
+              Outreach invitations →
             </Link>
           </div>
 
@@ -92,7 +87,7 @@ export default function PrayerRequestPage() {
                     <option>Physical health</option>
                     <option>Financial breakthrough</option>
                     <option>Emotional healing</option>
-                    <option>Other (within Object 2)</option>
+                    <option>Other</option>
                   </select>
                 </div>
                 <div className="flex flex-col gap-1">

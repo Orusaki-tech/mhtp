@@ -3,10 +3,6 @@ import { CHARTER } from "@/data/charter"
 import { SITE } from "@/data/site"
 import { Icon } from "@/components/ui/Icon"
 
-/**
- * Placeholder for future online courses within charter objects.
- * No specific course catalog is published until formally established.
- */
 export default function CoursesPage() {
   return (
     <div className="flex flex-col w-full">
@@ -16,12 +12,11 @@ export default function CoursesPage() {
             Coming Soon
           </span>
           <h1 className="font-headline-xl text-headline-xl text-on-primary font-bold">
-            Online Courses &amp; Digital Learning
+            Online Courses
           </h1>
           <p className="font-body-lg text-body-lg text-on-primary-container/90">
-            Online learning will support the company&apos;s objects — Christian faith, healing and
-            deliverance ministry, vocational skills development, and theological discipleship —
-            when courses are formally launched. No specific course list is published yet.
+            Digital learning will support faith, healing ministry, vocational skills, and
+            discipleship when courses launch. No course catalog is published yet.
           </p>
         </div>
       </section>
@@ -35,12 +30,7 @@ export default function CoursesPage() {
                 key={obj.id}
                 className="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm"
               >
-                <div className="flex items-center justify-between">
-                  <Icon name="menu_book" className="text-secondary text-[28px]" />
-                  <span className="font-label-sm text-label-sm uppercase font-bold text-secondary">
-                    Object {String(obj.id).padStart(2, "0")}
-                  </span>
-                </div>
+                <Icon name="menu_book" className="text-secondary text-[28px]" />
                 <h2 className="font-title-lg text-title-lg font-bold text-on-surface">{obj.title}</h2>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">{obj.body}</p>
               </article>

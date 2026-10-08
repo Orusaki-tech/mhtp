@@ -19,10 +19,7 @@ export function Header() {
       <div className="bg-primary-container text-on-primary-container px-gutter">
         <div className="max-w-[90rem] mx-auto h-8 flex items-center justify-between text-label-sm font-label-sm">
           <div className="flex items-center gap-space-sm min-w-0">
-            <span className="inline-flex items-center px-1.5 py-0.5 rounded-DEFAULT bg-secondary/20 text-secondary-fixed font-semibold tracking-wider uppercase text-[10px] shrink-0">
-              Limited by Guarantee
-            </span>
-            <span className="tracking-wide text-on-primary-container/90 truncate hidden sm:inline">
+            <span className="tracking-wide text-on-primary-container/90 truncate">
               {SITE.topBarNote}
             </span>
           </div>
@@ -51,7 +48,7 @@ export function Header() {
               World Healing Trinity Place
             </span>
             <span className="text-[10px] text-on-surface-variant tracking-wider uppercase font-medium whitespace-nowrap">
-              Limited • Faith & Empowerment
+              Faith · Healing · Empowerment
             </span>
           </div>
         </Link>

@@ -1,7 +1,6 @@
 import { useState, type FormEvent } from "react"
 import { Link } from "react-router-dom"
 import { CHARTER } from "@/data/charter"
-import { SITE } from "@/data/site"
 
 export default function OutreachPage() {
   const [sent, setSent] = useState(false)
@@ -19,16 +18,16 @@ export default function OutreachPage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center relative z-10">
           <div className="lg:col-span-7 flex flex-col gap-space-md">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-fixed w-max text-label-sm font-label-sm tracking-widest uppercase">
-              Memorandum Objects
+              Outreach
             </div>
             <h1 className="font-headline-xl text-headline-xl text-on-primary leading-tight">
               Outreach, Evangelism &amp; Healing Ministry
             </h1>
             <p className="font-body-lg text-body-lg text-on-primary-container leading-relaxed">
-              Outreach activities are those authorized in our Memorandum: preaching and teaching the
-              Christian faith; holistic healing and deliverance; evangelical missions, community
-              outreaches, crusades, conferences, and conventions; theological discipleship; and
-              collaboration with bodies that share similar aims.
+              We preach and teach the Christian faith; minister holistic healing and deliverance;
+              conduct evangelical missions, community outreaches, crusades, conferences, and
+              conventions; offer theological discipleship; and collaborate with ministries that
+              share similar aims.
             </p>
             <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
               <a
@@ -45,13 +44,6 @@ export default function OutreachPage() {
               </Link>
             </div>
           </div>
-          <div className="lg:col-span-5 bg-surface-container-lowest/10 backdrop-blur-md p-space-lg rounded-xl text-on-primary flex flex-col gap-2 shadow-xl">
-            <span className="font-label-sm text-label-sm text-secondary-fixed tracking-wider uppercase font-bold">
-              Contact
-            </span>
-            <p className="font-body-sm text-body-sm text-on-primary-container">{SITE.address}</p>
-            <p className="font-body-sm text-body-sm text-on-primary-container">{SITE.phone}</p>
-          </div>
         </div>
       </section>
 
@@ -59,15 +51,11 @@ export default function OutreachPage() {
         <div className="max-w-7xl mx-auto flex flex-col gap-space-lg">
           <div>
             <span className="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">
-              Charter Scope
+              Related Offerings
             </span>
             <h2 className="font-headline-xl text-headline-xl text-on-surface">
-              Authorized Outreach Objects
+              How We Serve
             </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
-              Only the objects below describe our outreach and ministry work. No other field
-              programs are claimed on this site.
-            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
             {relevant.map((obj) => (
@@ -75,9 +63,6 @@ export default function OutreachPage() {
                 key={obj.id}
                 className="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-sm"
               >
-                <span className="font-label-sm text-label-sm text-secondary font-bold uppercase">
-                  Object {String(obj.id).padStart(2, "0")}
-                </span>
                 <h3 className="font-headline-sm text-headline-sm text-on-surface">{obj.title}</h3>
                 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
                   {obj.body}
