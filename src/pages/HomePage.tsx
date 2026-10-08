@@ -5,28 +5,45 @@ import { SITE } from "@/data/site"
 export default function HomePage() {
   return (
     <div className="flex flex-col w-full">
-      <section className="relative w-full overflow-hidden bg-surface-container-lowest">
-        <div className="max-w-7xl mx-auto px-gutter py-space-xl lg:py-24">
-          <div className="max-w-3xl flex flex-col gap-space-md">
-            <span className="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">
+      <section className="relative w-full min-h-[calc(100svh-7.5rem)] overflow-hidden bg-primary-container">
+        <img
+          className="hero-media absolute inset-0 h-full w-full object-cover"
+          src="https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=2400&q=80"
+          alt="Congregation gathered in worship with hands raised toward warm light"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/80 to-primary-container/25"
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-transparent to-primary-container/40"
+          aria-hidden
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-gutter flex flex-col justify-end min-h-[calc(100svh-7.5rem)] py-16 lg:py-24">
+          <div className="max-w-2xl flex flex-col gap-space-md text-on-primary">
+            <p className="hero-rise hero-rise-delay-1 font-display-lg text-[clamp(2rem,5vw,3.25rem)] leading-tight font-bold tracking-tight text-secondary-fixed">
               {SITE.name}
-            </span>
-            <h1 className="font-headline-xl text-headline-xl lg:text-display-lg lg:font-display-lg text-primary tracking-tight font-bold">
+            </p>
+            <div
+              className="hero-accent-line h-0.5 w-24 bg-secondary-container"
+              aria-hidden
+            />
+            <h1 className="hero-rise hero-rise-delay-2 font-headline-xl text-headline-xl lg:text-display-lg lg:font-display-lg tracking-tight font-bold text-on-primary">
               Restored by faith. Equipped for life.
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-              A Ugandan ministry advancing Christian faith, holistic healing and deliverance, and
-              vocational empowerment — so people move from crisis toward independence and hope.
+            <p className="hero-rise hero-rise-delay-3 font-body-lg text-body-lg text-on-primary/85 max-w-xl leading-relaxed">
+              Christian faith, holistic healing and deliverance, and vocational empowerment — so
+              people move from crisis toward independence and hope.
             </p>
-            <div className="flex flex-wrap items-center gap-space-sm pt-space-xs">
+            <div className="hero-rise hero-rise-delay-4 flex flex-wrap items-center gap-space-sm pt-space-xs">
               <Link
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-label-md text-label-md font-semibold text-on-primary bg-primary hover:bg-primary-container transition-all shadow-md"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-label-md text-label-md font-semibold text-on-secondary-container bg-secondary-container hover:brightness-105 transition-all"
                 to="/pillars-of-ministry"
               >
                 Explore Ministry
               </Link>
               <Link
-                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-label-md text-label-md font-semibold text-on-surface bg-surface-container hover:bg-surface-container-high transition-all"
+                className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg font-label-md text-label-md font-semibold text-on-primary border border-on-primary/35 hover:bg-on-primary/10 transition-all"
                 to="/prayer-request"
               >
                 Request Prayer
