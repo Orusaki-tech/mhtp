@@ -20,10 +20,10 @@ export function Header() {
         <div className="max-w-[90rem] mx-auto h-8 flex items-center justify-between text-label-sm font-label-sm">
           <div className="flex items-center gap-space-sm min-w-0">
             <span className="inline-flex items-center px-1.5 py-0.5 rounded-DEFAULT bg-secondary/20 text-secondary-fixed font-semibold tracking-wider uppercase text-[10px] shrink-0">
-              Official Registry
+              Limited by Guarantee
             </span>
             <span className="tracking-wide text-on-primary-container/90 truncate hidden sm:inline">
-              {SITE.registryNote}
+              {SITE.topBarNote}
             </span>
           </div>
           <div className="hidden md:flex items-center gap-space-md shrink-0">

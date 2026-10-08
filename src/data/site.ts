@@ -1,7 +1,7 @@
 export const SITE = {
   name: "World Healing Trinity Place",
   legalName: "World Healing Trinity Place Limited",
-  tagline: "Limited • Faith & Empowerment Ministry",
+  tagline: "Company Limited by Guarantee • Uganda",
   address: "Plot 14 Trinity Heights Road, Kampala, Republic of Uganda",
   email: "stewardship@worldhealingtrinity.org",
   phone: "+256 (0) 414 000 000 / +256 (0) 772 000 000",
@@ -9,8 +9,8 @@ export const SITE = {
   phoneLandline: "+256 (0) 414 000 000",
   emblem:
     "https://lh3.googleusercontent.com/aida/AEtjO1W5yFcCY_hFYohOWBACWWIWqcBwRwDN2csBjR_ZVrLkdyNVD-FchCA-SGpu-tXOVBNt0GYatoOHuClPCU2fAAoNUad7lDmiBSroFlUuxe2jEkpjwizXLYtcT6ucjeUYzZBHFejug5RcGSukZVg6lCdxhoe-2VoQO_de7_TMqH1AmG_kOk5kjThdlvwUJphkm5g7nwt-CCo2V3WN67__pSUUM2uby1Ae6_7l0Pe3s2GA",
-  registryNote:
-    "Reg. Uganda Companies Act (Limited by Guarantee) • URSB Registered Entity",
+  /** Top-bar note — company identity only (no registry bureau branding) */
+  topBarNote: "Company Limited by Guarantee • Faith, Healing & Vocational Empowerment",
 } as const
 
 export type NavItem = {
@@ -35,7 +35,6 @@ export const CTA_NAV = {
   courses: { label: "Online Courses", to: "/courses" },
 } as const
 
-/** Reserved routes for upcoming product features */
 export const FUTURE_ROUTES = {
   courses: "/courses",
   courseDetail: "/courses/:courseId",

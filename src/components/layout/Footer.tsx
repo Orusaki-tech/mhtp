@@ -22,9 +22,9 @@ export function Footer() {
               </div>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              A faith-anchored Ugandan institution committed to holistic spiritual renewal,
-              compassion ministry, and practical vocational empowerment. Restoring dignity and
-              self-reliance to vulnerable communities across Uganda.
+              A company limited by guarantee in Uganda, established for the advancement of Christian
+              faith, holistic healing and deliverance, vocational training, and community outreach
+              — as set out in its Memorandum of Association.
             </p>
             <div className="flex flex-col gap-1 text-body-sm font-body-sm text-on-surface-variant">
               <div className="flex items-center gap-2">
@@ -44,27 +44,27 @@ export function Footer() {
 
           <div className="lg:col-span-2 flex flex-col gap-space-sm">
             <span className="font-label-md text-label-md font-bold uppercase tracking-wider text-on-surface">
-              Pillars & Work
+              Ministry
             </span>
             <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/pillars-of-ministry">
-                  Faith & Intercession
+                  Objects &amp; Pillars
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/outreach-healing">
-                  Community Health & Healing
+                  Outreach
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/vocational-programs">
-                  Vocational Guilds
+                  Vocational Training
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-on-surface transition-colors" to="/vocational-enrollment">
-                  Youth Apprenticeship
+                <Link className="hover:text-on-surface transition-colors" to="/prayer-request">
+                  Prayer Request
                 </Link>
               </li>
               <li>
@@ -82,22 +82,22 @@ export function Footer() {
             <ul className="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/about-legal-status">
-                  URSB Certificate & Articles
+                  Memorandum &amp; Articles
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/about-legal-status">
-                  Board of Trustees
+                  Founding Subscribers
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/partner-donate">
-                  Stewardship & Audit Reports
+                  Partner / Donate
                 </Link>
               </li>
               <li>
                 <Link className="hover:text-on-surface transition-colors" to="/contact-give">
-                  Ministry Offices
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -106,11 +106,10 @@ export function Footer() {
           <div className="lg:col-span-4 flex flex-col gap-space-md">
             <div className="bg-surface-container p-space-md rounded-xl flex flex-col gap-space-sm">
               <span className="font-title-md text-title-md font-bold text-on-surface">
-                Ministry Dispatch & Reports
+                Stay in Touch
               </span>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Subscribe to receive quarterly impact publications, prayer communiqués, and verified
-                project dispatches directly from Kampala.
+                Leave your email for ministry updates related to our charter objects.
               </p>
               <form
                 className="flex flex-col gap-space-xs"
@@ -119,7 +118,7 @@ export function Footer() {
                 <div className="flex gap-2">
                   <input
                     className="flex-1 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary"
-                    placeholder="Enter institutional or personal email"
+                    placeholder="Email address"
                     type="email"
                   />
                   <button
@@ -129,9 +128,6 @@ export function Footer() {
                     Join
                   </button>
                 </div>
-                <span className="font-label-sm text-label-sm text-on-surface-variant/70">
-                  We honor your data with strict non-profit confidentiality.
-                </span>
               </form>
             </div>
           </div>
@@ -139,29 +135,26 @@ export function Footer() {
 
         <div className="pt-space-md bg-surface-container-high/40 rounded-xl p-space-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md text-body-sm font-body-sm text-on-surface-variant">
           <div className="flex items-center gap-space-sm">
-            <Icon name="shield" className="text-[20px] text-secondary" />
+            <Icon name="shield" className="text-[20px] text-secondary shrink-0" />
             <p>
-              <strong className="text-on-surface">Legal Entity Status:</strong> Incorporated under
-              the Uganda Companies Act 2012 as a Company Limited by Guarantee without Share Capital.
-              Regulated by the Uganda Registration Services Bureau (URSB).
+              <strong className="text-on-surface">Legal Entity:</strong> {SITE.legalName} is a
+              company limited by guarantee and not having a share capital, with objects set out in
+              its Memorandum of Association.
             </p>
           </div>
-          <div className="flex items-center gap-space-md whitespace-nowrap text-label-sm font-label-sm text-on-surface-variant">
-            <Link className="hover:text-on-surface transition-colors" to="/about-legal-status">
-              Constitution & By-laws
-            </Link>
-            <span>•</span>
-            <Link className="hover:text-on-surface transition-colors" to="/contact-give">
-              Ethics Hotline
-            </Link>
-          </div>
+          <Link
+            className="hover:text-on-surface transition-colors whitespace-nowrap text-label-sm font-label-sm"
+            to="/about-legal-status"
+          >
+            Memorandum &amp; Articles
+          </Link>
         </div>
 
         <div className="mt-space-lg pt-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
-          <p>© {new Date().getFullYear()} {SITE.legalName}. All Rights Reserved. Reg. Kampala, Uganda.</p>
-          <p className="text-on-surface-variant/80">
-            Restoring Hope • Imparting Skills • Healing Communities
+          <p>
+            © {new Date().getFullYear()} {SITE.legalName}. All Rights Reserved.
           </p>
+          <p className="text-on-surface-variant/80">{SITE.address}</p>
         </div>
       </div>
     </footer>
